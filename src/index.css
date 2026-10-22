@@ -1,0 +1,388 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Bamini_Tamil_09';
+  src: url('/fonts/BAMINI-Tamil09.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --font-bamini: 'Bamini_Tamil_09', sans-serif;
+    --font-display: 'Arima', 'Tiro Tamil', 'Noto Serif Tamil', Georgia, serif;
+    --font-stylish: 'Kavivanar', 'Arima', 'Tiro Tamil', serif;
+    --font-serif: 'Tiro Tamil', 'Noto Serif Tamil', Georgia, serif;
+    --font-body: 'Mukta Malar', 'Hind Madurai', 'Noto Sans Tamil', sans-serif;
+    --font-english: 'Cormorant Garamond', Georgia, serif;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: #FAF3E3;
+    color: #3B1610;
+    overflow-x: hidden;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .font-bamini-09 {
+    font-family: 'Bamini_Tamil_09', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    text-shadow: 0 1px 0 rgba(255, 253, 248, 0.92), 0 2px 6px rgba(110, 20, 20, 0.14);
+  }
+
+  h1, h2, .font-tamil-display {
+    font-family: var(--font-display);
+    text-shadow: 0 1px 0 rgba(255, 253, 248, 0.9), 0 2px 5px rgba(110, 20, 20, 0.1);
+  }
+
+  h3, h4, .font-tamil-serif {
+    font-family: var(--font-serif);
+  }
+
+  .font-tamil-stylish {
+    font-family: var(--font-stylish);
+  }
+
+  .font-tamil-body {
+    font-family: var(--font-body);
+  }
+
+  .font-english-serif {
+    font-family: var(--font-english);
+  }
+}
+
+/* Fluid responsive Tamil typography that scales smoothly to fit any screen */
+.text-fluid-hero {
+  font-size: clamp(1.18rem, 3.8vw, 2.15rem);
+  line-height: 1.32;
+}
+
+.text-fluid-house {
+  font-size: clamp(1.5rem, 4.6vw, 2.85rem);
+  line-height: 1.26;
+}
+
+.text-fluid-h2 {
+  font-size: clamp(1.15rem, 3.4vw, 1.95rem);
+  line-height: 1.34;
+}
+
+.text-fluid-h3 {
+  font-size: clamp(1.05rem, 2.7vw, 1.35rem);
+  line-height: 1.38;
+}
+
+.text-fluid-verse {
+  font-size: clamp(0.92rem, 2.5vw, 1.18rem);
+  line-height: 1.85;
+}
+
+.text-fluid-body {
+  font-size: clamp(0.86rem, 2.2vw, 1.04rem);
+  line-height: 1.82;
+}
+
+.text-fluid-lintel {
+  font-size: clamp(0.64rem, 2.1vw, 0.88rem);
+  line-height: 1.35;
+}
+
+@keyframes thoranamSway {
+  0%, 100% {
+    transform: rotate(-2.5deg);
+  }
+  50% {
+    transform: rotate(2.5deg);
+  }
+}
+
+@keyframes thoranamSwayReverse {
+  0%, 100% {
+    transform: rotate(2.2deg);
+  }
+  50% {
+    transform: rotate(-2.2deg);
+  }
+}
+
+@keyframes birdHoverLeft {
+  0%, 100% {
+    transform: translate3d(0px, 0px, 0) rotate(-4deg);
+  }
+  25% {
+    transform: translate3d(12px, -9px, 0) rotate(3deg);
+  }
+  55% {
+    transform: translate3d(6px, 4px, 0) rotate(-6deg);
+  }
+  80% {
+    transform: translate3d(-5px, -6px, 0) rotate(2deg);
+  }
+}
+
+@keyframes birdHoverRight {
+  0%, 100% {
+    transform: translate3d(0px, 0px, 0) rotate(4deg);
+  }
+  25% {
+    transform: translate3d(-12px, -8px, 0) rotate(-3deg);
+  }
+  55% {
+    transform: translate3d(-6px, 5px, 0) rotate(6deg);
+  }
+  80% {
+    transform: translate3d(5px, -6px, 0) rotate(-2deg);
+  }
+}
+
+@keyframes wingFlutter {
+  0%, 100% {
+    transform: rotate(-7deg) scaleY(1.04) scaleX(1);
+  }
+  50% {
+    transform: rotate(24deg) scaleY(0.54) scaleX(0.92) skewX(8deg);
+  }
+}
+
+@keyframes wingFlutterEcho {
+  0%, 100% {
+    transform: rotate(18deg) scaleY(0.64) scaleX(0.95);
+    opacity: 0.25;
+  }
+  50% {
+    transform: rotate(-10deg) scaleY(1.06) scaleX(1);
+    opacity: 0.48;
+  }
+}
+
+@keyframes diyaFlame {
+  0%, 100% {
+    transform: scale(1) rotate(-2deg);
+    opacity: 0.95;
+  }
+  50% {
+    transform: scale(1.12, 0.92) rotate(2deg);
+    opacity: 1;
+  }
+}
+
+@keyframes lotusFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+@keyframes petalDrift {
+  0% {
+    transform: translate3d(0, -10%, 0) rotate(0deg);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.7;
+  }
+  85% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translate3d(24px, 110vh, 0) rotate(320deg);
+    opacity: 0;
+  }
+}
+
+.animate-thoranam {
+  transform-origin: top center;
+  animation: thoranamSway 4.2s ease-in-out infinite;
+}
+
+.animate-thoranam-alt {
+  transform-origin: top center;
+  animation: thoranamSwayReverse 4.8s ease-in-out infinite;
+}
+
+.animate-bird-left {
+  animation: birdHoverLeft 3.8s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-bird-right {
+  animation: birdHoverRight 4.1s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-wing {
+  transform-origin: 45% 41%;
+  animation: wingFlutter 0.16s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-wing-echo {
+  transform-origin: 45% 41%;
+  animation: wingFlutterEcho 0.16s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+.animate-diya {
+  transform-origin: bottom center;
+  animation: diyaFlame 1.8s ease-in-out infinite;
+}
+
+.animate-lotus {
+  animation: lotusFloat 5s ease-in-out infinite;
+}
+
+@keyframes sunRiseGlow {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+    opacity: 0.94;
+  }
+  50% {
+    transform: translateY(-6px) scale(1.04);
+    opacity: 1;
+  }
+}
+
+@keyframes coconutBreeze {
+  0%, 100% {
+    transform: rotate(-2.2deg);
+  }
+  50% {
+    transform: rotate(2.5deg);
+  }
+}
+
+@keyframes paddyBreeze {
+  0%, 100% {
+    transform: skewX(-2deg) scaleY(1);
+  }
+  50% {
+    transform: skewX(2.5deg) scaleY(1.02);
+  }
+}
+
+@keyframes canalWaterShimmer {
+  0%, 100% {
+    transform: translateX(-8px);
+    opacity: 0.85;
+  }
+  50% {
+    transform: translateX(8px);
+    opacity: 1;
+  }
+}
+
+@keyframes brassRingGlow {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.06);
+    opacity: 1;
+  }
+}
+
+.animate-sunrise-glow {
+  transform-origin: center center;
+  animation: sunRiseGlow 5.5s ease-in-out infinite;
+}
+
+.animate-coconut-sway {
+  transform-origin: bottom center;
+  animation: coconutBreeze 4.6s ease-in-out infinite;
+}
+
+.animate-coconut-sway-alt {
+  transform-origin: bottom center;
+  animation: coconutBreeze 5.2s ease-in-out infinite reverse;
+}
+
+.animate-paddy-wave {
+  transform-origin: bottom center;
+  animation: paddyBreeze 3.6s ease-in-out infinite;
+}
+
+.animate-canal-water {
+  animation: canalWaterShimmer 3.8s ease-in-out infinite;
+}
+
+.animate-brass-ring {
+  transform-origin: center center;
+  animation: brassRingGlow 2.4s ease-in-out infinite;
+}
+
+.door-perspective-stage {
+  perspective: 1600px;
+}
+
+.door-panel-left {
+  transform-origin: left center;
+  transition: transform 1350ms cubic-bezier(0.22, 1, 0.36, 1), opacity 1100ms ease-out;
+}
+
+.door-panel-right {
+  transform-origin: right center;
+  transition: transform 1350ms cubic-bezier(0.22, 1, 0.36, 1), opacity 1100ms ease-out;
+}
+
+.door-panel-left-open {
+  transform: rotateY(-108deg);
+  opacity: 0.25;
+}
+
+.door-panel-right-open {
+  transform: rotateY(108deg);
+  opacity: 0.25;
+}
+
+@keyframes mandalaSlowSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-mandala-slow {
+  transform-origin: center center;
+  animation: mandalaSlowSpin 36s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-thoranam,
+  .animate-thoranam-alt,
+  .animate-bird-left,
+  .animate-bird-right,
+  .animate-wing,
+  .animate-diya,
+  .animate-lotus,
+  .animate-sunrise-glow,
+  .animate-coconut-sway,
+  .animate-coconut-sway-alt,
+  .animate-paddy-wave,
+  .animate-canal-water,
+  .animate-brass-ring,
+  .animate-mandala-slow {
+    animation: none !important;
+  }
+  .door-panel-left,
+  .door-panel-right {
+    transition: opacity 200ms ease-out !important;
+  }
+  .door-panel-left-open,
+  .door-panel-right-open {
+    transform: none !important;
+    opacity: 0 !important;
+  }
+}
+
+
+
